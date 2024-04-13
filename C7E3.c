@@ -8,18 +8,18 @@
 
 int main(void){
 
-	long n = 0;
-	long sum = 0;
+	double n = 0;
+	double sum = 0;
 	
 	printf("This program sums a series of doubles.\n");
 	printf("Enter doubles (0 to terminate): ");
 	
-	scanf("%ld", &n);
+	scanf("%lf", &n);
 	while(n != 0){
 		sum += n;
-		scanf("%ld", &n);
+		scanf("%lf", &n);
 	}
-	printf("The sum is: %ld\n", sum);
+	printf("The sum is: %lf\n", sum);
 	
 	return 0;
 }
