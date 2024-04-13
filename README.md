@@ -1,5 +1,5 @@
-# c_king_excercises
-My solutions to most of the programming excersises of the book C Programming A Modern Approach (2nd Edition) by K.N. King.
+# c_king_exercises
+My solutions to most of the programming exercises of the book C Programming A Modern Approach (2nd Edition) by K.N. King.
 
 C = Chapter
-E = Programming excersise number
+E = Programming exercise number
