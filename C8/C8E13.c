@@ -5,24 +5,45 @@
  */
  
 #include <stdio.h>
-#include <ctype.h>
+#include <stdlib.h>
+#include <stdbool.h>
 
 int main(void){
-	int input = 0;
-	int value[26] = { 1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
-	int total = 0;
-	int index = 0;
-
-	printf("Enter a word: ");
-		
-	while((input = getchar()) != '\n'){		
-		input = toupper(input);
-		if(input >= 'A' && input <= 'Z'){
-			index = (input - 65);
-			total += value[index];			
+	int input = 0;	
+	int initial = 0;
+	bool initial_found = 0;
+	bool space_found = 0;
+	int lastname[20] = { 0 };
+	int i = 0;
+	
+	printf("Enter a first and last name: ");
+	while(initial_found != 1){	
+		input = getchar();
+		if(input >= 'A' && input <= 'z'){
+			initial = input;
+			initial_found = 1;
 		}
 	}
-	printf("Scrabble value: %d\n", total);
+	while(space_found != 1){
+		input = getchar();
+		if(input == ' '){
+			space_found = 1;
+		}		
+	}
 	
-	return 0;
+	while((input = getchar()) != '\n'){
+		if(input != ' '){
+			if(i < 20){
+				lastname[i] = input;
+				i++;
+			}
+		}
+	}
+	printf("You entered the name: ");
+	for(int j = 0 ; j < i ; j++){
+		printf("%c", lastname[j]);
+	}	
+	printf(", %c.\n", initial);
+	
+	return EXIT_SUCCESS;
 }
