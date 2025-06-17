@@ -2,8 +2,7 @@
  * C Programming - A Modern Approach 2nd Edition
  * Chapter 10 Excercises by Reslashd (c)2025
  * 
- */
- 
+ */ 
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -58,8 +57,7 @@ void clear_digits_array(void){
 //then set corresponding segment character in digits array
 void process_digit(int digit, int position){
 	for(int i = 0 ; i < 7 ; i++){		
-		if(segments[digit][i] == 1){
-			
+		if(segments[digit][i] == 1){			
 			switch(i){
 				case 0:
 				digits[0][1 + position] = '_';
